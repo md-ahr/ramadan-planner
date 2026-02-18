@@ -1,0 +1,18 @@
+{
+  "name": "Ramadan Planner",
+  "short_name": "Ramadan Planner",
+  "description": "Plan your Ramadan with Quran tracking, prayers, du'a, charity, and more.",
+  "start_url": "/planner",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/window.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

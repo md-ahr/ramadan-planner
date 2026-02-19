@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ramadan Planner
+
+A modern, responsive web app for planning and tracking your Ramadan activities. Based on the Ilm Institute planner format, it helps you organize Quran reading, prayers, du'a, charity, and more—with support for English and Bengali.
+
+## Features
+
+- **Pre-Ramadan** — Checklist for core preparations, tasks, books, missed fasts, and Sha'ban fasting
+- **Quran** — Juz tracking (30 days), Surah Al-Kahf on Fridays, and memorization plan
+- **Prayers** — Daily prayers (Fajr–Isha), night prayers (Tarawih, Tahajud, Witr), Duha, and Sunnah Rawatib
+- **Dua & Adhkar** — Categorized dua list and morning/evening adhkar
+- **Habits** — Build good habits and break bad ones
+- **Charity** — Weekly acts, iftar gathering planner, and acts with children
+- **Children** — Activities by week (iftar prep, Quran, Tarawih, hadith sharing)
+
+## Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Framework | Next.js 16, React 19 |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4, shadcn/ui |
+| i18n | next-intl (EN, Bengali) |
+| State | Zustand |
+| Storage | IndexedDB (Dexie) |
+| Dates | Aladhan API for Ramadan dates |
+
+## Prerequisites
+
+- Node.js 18+
+- pnpm (recommended) or npm / yarn
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Run development server
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). Data is stored locally in the browser (IndexedDB).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+|---------|-------------|
+| `pnpm dev` | Start development server |
+| `pnpm build` | Build for production (uses webpack) |
+| `pnpm start` | Start production server |
+| `pnpm lint` | Run ESLint |
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+├── app/                    # Next.js App Router
+│   ├── page.tsx            # Home / landing
+│   └── planner/            # Planner routes
+├── components/
+│   ├── layout/             # Sidebar, etc.
+│   ├── planner/            # Planner-specific components
+│   └── ui/                 # shadcn/ui components
+├── lib/
+│   ├── api/                # Aladhan API client
+│   ├── storage/            # Dexie DB, defaults
+│   ├── stores/              # Zustand store
+│   └── utils/               # Helpers, progress, ramadan dates
+├── messages/               # i18n JSON (en, bn)
+├── i18n/                   # next-intl config
+└── actions/                # Server actions (locale)
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Build and deploy like any Next.js app. Example for Vercel:
 
-## Deploy on Vercel
+```bash
+pnpm build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Configure environment variables if needed. Ramadan dates fall back to cached values when the Aladhan API is unavailable.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## PWA
+
+The app includes a web manifest for install as a Progressive Web App (PWA) on mobile and desktop.
+
+## License
+
+Private project.

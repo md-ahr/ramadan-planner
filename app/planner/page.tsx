@@ -70,7 +70,7 @@ export default function PlannerDashboardPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tNav("dashboard")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tNav("dashboard")}</h2>
         <p className="text-muted-foreground">
           {tPlanner("welcome", { year: data.ramadanYear })}
         </p>
@@ -110,8 +110,8 @@ export default function PlannerDashboardPage() {
       </Card>
 
       <div>
-        <h3 className="mb-4 text-lg font-medium">{t("quickNavigation")}</h3>
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        <h3 className="mb-4 text-base font-medium sm:text-lg">{t("quickNavigation")}</h3>
+        <div className="grid gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3">
           {sections.map(({ href, key, icon: Icon }) => (
             <Link key={href} href={href}>
               <Card className="transition-colors hover:bg-muted/50">

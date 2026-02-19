@@ -63,7 +63,7 @@ export default function DuaPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tDua("title")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tDua("title")}</h2>
         <p className="text-muted-foreground">{tDua("description")}</p>
       </div>
 

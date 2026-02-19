@@ -50,7 +50,7 @@ export default function QuranPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tQuran("title")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tQuran("title")}</h2>
         <p className="text-muted-foreground">{tQuran("description")}</p>
       </div>
 
@@ -95,8 +95,8 @@ export default function QuranPage() {
               placeholder={tQuran("surahPlaceholder")}
             />
           </div>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+          <div className="-mx-6 overflow-x-auto px-6 sm:mx-0 sm:px-0">
+            <table className="min-w-[320px] w-full text-sm">
               <thead>
                 <tr className="border-b">
                   <th className="py-2 text-left">{t("day")}</th>

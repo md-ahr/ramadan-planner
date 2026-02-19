@@ -45,7 +45,7 @@ export default function PreRamadanPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tPre("title")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tPre("title")}</h2>
         <p className="text-muted-foreground">{tPre("description")}</p>
       </div>
 

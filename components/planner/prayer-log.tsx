@@ -52,8 +52,8 @@ function PrayerTable({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent className="overflow-x-auto">
-        <table className="w-full text-sm">
+      <CardContent className="-mx-6 overflow-x-auto px-6 sm:mx-0 sm:px-0">
+        <table className="min-w-[480px] w-full text-sm">
           <thead>
             <tr className="border-b">
               <th className="sticky left-0 z-10 bg-card py-2 text-left">{dayLabel}</th>
@@ -67,7 +67,7 @@ function PrayerTable({
           <tbody>
             {days.map((day, i) => (
               <tr key={i} className="border-b">
-                <td className="sticky left-0 z-10 bg-background py-1.5 font-medium">{i + 1}</td>
+                <td className="sticky left-0 z-10 bg-card py-1.5 font-medium">{i + 1}</td>
                 {prayers.map((p) => (
                   <td key={p.key} className="text-center">
                     <input

@@ -40,7 +40,7 @@ export default function ChildrenPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tChildren("title")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tChildren("title")}</h2>
         <p className="text-muted-foreground">{tChildren("description")}</p>
       </div>
 

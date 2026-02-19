@@ -42,11 +42,11 @@ export default function HabitsPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tHabits("title")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tHabits("title")}</h2>
         <p className="text-muted-foreground">{tHabits("description")}</p>
       </div>
 
-      <div className="grid gap-8 md:grid-cols-2">
+      <div className="grid gap-6 sm:gap-8 md:grid-cols-2">
         <Card>
           <CardHeader>
             <CardTitle>{tHabits("buildTitle")}</CardTitle>

@@ -49,7 +49,7 @@ export default function PrayersPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tPrayers("title")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tPrayers("title")}</h2>
         <p className="text-muted-foreground">{tPrayers("description")}</p>
       </div>
 
@@ -74,7 +74,7 @@ export default function PrayersPage() {
           <CardDescription>{tPrayers("duhaDescription")}</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-3 sm:gap-4">
             {np.duhaWeeks.map((done, i) => (
               <label
                 key={i}
@@ -104,7 +104,7 @@ export default function PrayersPage() {
           <CardDescription>{tPrayers("sunnahDescription")}</CardDescription>
         </CardHeader>
         <CardContent>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4 lg:grid-cols-7">
             {weekdayKeys.map((key, i) => (
               <div key={key} className="space-y-1">
                 <label className="text-sm font-medium">{tPrayers(key)}</label>

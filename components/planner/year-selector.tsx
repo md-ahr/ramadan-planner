@@ -30,7 +30,7 @@ export function YearSelector() {
     >
       <SelectTrigger
         id="ramadan-year"
-        className="w-[140px]"
+        className="min-w-[100px] w-full max-w-[140px]"
         aria-label={tPlanner("selectRamadanYear")}
       >
         <SelectValue placeholder={t("year")} />

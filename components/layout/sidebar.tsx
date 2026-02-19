@@ -27,16 +27,17 @@ const navItems = [
 
 interface SidebarProps {
   className?: string;
+  onNavigate?: () => void;
 }
 
-export function Sidebar({ className }: SidebarProps) {
+export function Sidebar({ className, onNavigate }: SidebarProps) {
   const pathname = usePathname();
   const t = useTranslations("nav");
 
   return (
-    <aside
+    <div
       className={cn(
-        "fixed inset-y-0 left-0 z-20 flex w-56 flex-col border-r border-border bg-card print:hidden",
+        "flex h-full w-full flex-col bg-card",
         className
       )}
       aria-label="Planner navigation"
@@ -49,6 +50,7 @@ export function Sidebar({ className }: SidebarProps) {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onNavigate}
               className={cn(
                 "flex items-center gap-2 rounded-lg px-3 py-2 text-sm transition-colors",
                 isActive
@@ -63,6 +65,6 @@ export function Sidebar({ className }: SidebarProps) {
           );
         })}
       </nav>
-    </aside>
+    </div>
   );
 }

@@ -18,8 +18,13 @@
   },
   "home": {
     "title": "Ramadan Planner",
-    "description": "Plan your Ramadan with the Ilm Institute planner. Track Quran reading, prayers, du'a, charity, and more.",
-    "openPlanner": "Open Planner"
+    "subtitle": "Plan your Ramadan with intention",
+    "description": "Track Quran reading, prayers, du'a, charity, and more. Based on the Ilm Institute planner.",
+    "openPlanner": "Open Planner",
+    "featureQuran": "Quran journey",
+    "featurePrayers": "Prayer tracking",
+    "featureDua": "Dua & Adhkar",
+    "featureCharity": "Charity & Iftar"
   },
   "nav": {
     "dashboard": "Dashboard",
@@ -35,7 +40,7 @@
     "title": "Ramadan Planner",
     "welcome": "Welcome to your Ramadan {year} planner. May Allah accept your worship.",
     "ramadanDates": "Ramadan {year} Dates",
-    "ramadanRange": "1 Ramadan (144{ah} AH) – 30 Ramadan",
+    "ramadanRange": "1 Ramadan (14{ah} AH) – 30 Ramadan",
     "selectRamadanYear": "Select Ramadan year",
     "ramadanYearLabel": "Ramadan {year}"
   },

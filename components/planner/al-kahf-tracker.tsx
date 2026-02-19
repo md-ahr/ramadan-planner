@@ -18,7 +18,7 @@ export function AlKahfTracker({ weeks, onChange }: AlKahfTrackerProps) {
         <CardDescription>{t("alKahfDescription")}</CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-3 sm:gap-4">
           {weeks.map((done, i) => (
             <label
               key={i}

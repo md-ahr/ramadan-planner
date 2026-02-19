@@ -43,7 +43,7 @@ export default function CharityPage() {
   return (
     <div className="space-y-8">
       <div>
-        <h2 className="text-2xl font-semibold">{tCharity("title")}</h2>
+        <h2 className="text-xl font-semibold sm:text-2xl">{tCharity("title")}</h2>
         <p className="text-muted-foreground">{tCharity("description")}</p>
       </div>
 
